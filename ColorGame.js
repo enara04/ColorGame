@@ -8,15 +8,15 @@ var resetButton = document.querySelector("#reset");
 var modeButtons = document.querySelectorAll(".mode");
 var numSquares = 6;
 
-	for (var i = 0; i < modeButtons.length; i++) {
-		modeButtons[i].addEventListener("click", function(){
-			modeButtons[0].classList.remove("selected");
-			modeButtons[1].classList.remove("selected");
-			this.classList.add("selected");
+for (var i = 0; i < modeButtons.length; i++) {
+	modeButtons[i].addEventListener("click", function(){
+		modeButtons[0].classList.remove("selected");
+		modeButtons[1].classList.remove("selected");
+		this.classList.add("selected");
 
-			//figure out how many squares to show
-			//this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
-			if (this.textContent === "Easy"){
+		//figure out how many squares to show
+		//this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
+		if (this.textContent === "Easy"){
 			numSquares = 3;
 			} else {
 				numSquares = 6;
@@ -24,8 +24,8 @@ var numSquares = 6;
 			//pick new colors
 			//pick a newPickedColor
 			reset();
-		});
-	}
+			});
+}
 
 function reset(){
 //generate all new colors
@@ -42,8 +42,8 @@ messageDisplay.textContent = "";
 		if(colors[i]){
 			//add initial colors to squares
 			squares[i].style.backgroundColor = colors[i];
-			}	else {
-				squares[i].style.backgroundColor = "lightblue";	
+			} else {
+				squares[i].style.backgroundColor = "lightblue"; 
 			}
 		}
 	h1.style.backgroundColor ="steelblue";
@@ -51,7 +51,7 @@ messageDisplay.textContent = "";
 	}
 
 resetButton.addEventListener("click", reset);
-colorDisplay.textContent = pickedColor ;
+colorDisplay.textContent = pickedColor;
 
 for (var i = 0; i < squares.length; i++){
 	//add initial colors to squares
@@ -70,15 +70,15 @@ for (var i = 0; i < squares.length; i++){
 			}else{
 				this.style.backgroundColor = "lightblue";
 				messageDisplay.textContent = "Try Again";
-			}		
+			}   
 	});
 }
 
 function changeColors(color) {
 	//loop through all squares
 	for (var i = 0; i < colors.length; i++){
-//change each color to correct one
-	squares[i].style.backgroundColor = color;
+		//change each color to correct one
+		squares[i].style.backgroundColor = color;
 	}
 }
 
