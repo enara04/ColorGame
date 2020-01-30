@@ -1,12 +1,4 @@
 var colors = generateRandomColors(6);
-/* ["rgb(255, 0, 0)",
-			"rgb(255, 255, 0)",
-			"rgb(0, 255, 0)",
-			"rgb(0, 255, 255)",
-			"rgb(0, 0, 255)",
-			"rgb(255, 0, 255)",
-	]
-	*/
 var squares = document.querySelectorAll(".square");
 var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
@@ -58,76 +50,7 @@ messageDisplay.textContent = "";
 
 	}
 
-//var numSquares = 6;
-/* ez is egy módszer, de egyszerűbb megadni class-t adni a két buttonnak
-var easyBtn = document.querySelector("#easyBtn");
-var hardBtn = document.querySelector("#hardBtn");
-
-
-easyBtn.addEventListener("click", function(){
-	easyBtn.classList.add("selected");
-	hardBtn.classList.remove("selected");
-	messageDisplay.textContent = "";
-	//generate all new colors
-	numSquares = 3;
-	colors = generateRandomColors(numSquares);
-	//pick a new random color
-	pickedColor = pickColor();
-	//change color display to match picked color
-	colorDisplay.textContent = pickedColor;
-	//change colors of squares
-	for (var i = 0; i < squares.length; i++){
-		if(colors[i]){
-		//add initial colors to squares
-		squares[i].style.backgroundColor = colors[i];
-		}	else {
-			squares[i].style.backgroundColor = "lightblue";	
-		}
-	}
-	h1.style.backgroundColor ="steelblue";
-});
-
-hardBtn.addEventListener("click", function(){
-	hardBtn.classList.add("selected");
-	easyBtn.classList.remove("selected");
-	messageDisplay.textContent = "";
-	//generate all new colors
-	numSquares = 6;
-	colors = generateRandomColors(numSquares);
-	//pick a new random color
-	pickedColor = pickColor();
-	//change color display to match picked color
-	colorDisplay.textContent = pickedColor;
-	//change colors of squares
-	for (var i = 0; i < squares.length; i++){
-		//add initial colors to squares
-		squares[i].style.backgroundColor = colors[i];
-		squares[i].style.display = "block";
-	}
-	h1.style.backgroundColor ="steelblue";
-});
-
-*/
-
 resetButton.addEventListener("click", reset);
-/* reset funkció nélküli verzió
-//generate all new colors
-colors = generateRandomColors(numSquares);
-//pick a new random color
-pickedColor = pickColor();
-//change color display to match picked color
-colorDisplay.textContent = pickedColor;
-//change colors of squares
-for (var i = 0; i < squares.length; i++){
-	//add initial colors to squares
-	squares[i].style.backgroundColor = colors[i];
-	}
-h1.style.backgroundColor ="steelblue";
-resetButton.textContent = "New Colors";
-messageDisplay.textContent = "";
-});
-*/
-
 colorDisplay.textContent = pickedColor ;
 
 for (var i = 0; i < squares.length; i++){
